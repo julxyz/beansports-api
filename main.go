@@ -11,7 +11,7 @@ func main() {
 
 	h := requestHandler
 
-	if err := fasthttp.ListenAndServe("localhost:8080", h); err != nil {
+	if err := fasthttp.ListenAndServe("0.0.0.0:8080", h); err != nil {
 		log.Fatalf("Error in ListenAndServe: %v", err)
 	}
 }
