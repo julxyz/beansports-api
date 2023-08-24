@@ -24,12 +24,11 @@ jobs:
 
       - name: Push to prod
         uses: appleboy/scp-action@master
-        env:
+        with:
           HOST: ${{ secrets.PROD_HOST }}
           USERNAME: ${{ secrets.PROD_USER }}
           PORT: ${{ secrets.PROD_PORT }}
           PASSWORD: ${{ secrets.PROD_PASSWORD }}
-        with:
           source: "beansports-api"
           target: "/home/beansports/bin/"
 
